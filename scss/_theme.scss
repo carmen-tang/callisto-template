@@ -1,0 +1,207 @@
+// -----------------------------------------------------------------------------
+// THEME STYLES
+// -----------------------------------------------------------------------------
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700|Lato:400,600,700");
+
+// -----------------------------------------------------------------------------
+// VARIABLES
+// -----------------------------------------------------------------------------
+
+// COLORS
+$black: #0e1111;
+$white: #ffffff;
+$purple: #a179fd;
+$blue: #2ac5e5;
+$yellow: #fdd53d;
+$graylight: #e7e9f0;
+$graymediumlight: #f6f7fa;
+$graymedium: #839399;
+$graymediumdark: #526269;
+$graydark: #828282;
+
+// FONT SIZE
+$smaller: 10px;
+$small: 12px;
+$medium: 14px;
+$medium-large: 17px;
+$large: 20px;
+
+// RESPONSIVE SIZING
+$widthMobile: 400px;
+$widthTablet: 768px;
+$widthTabletLarge: 900px;
+$widthDesktop: 1100px;
+
+// ETC
+$box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.15);
+
+// -----------------------------------------------------------------------------
+// BASE
+// -----------------------------------------------------------------------------
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  background-color: $white;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  text-size-adjust: 100%;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+body {
+  color: $black;
+  font-size: $medium;
+  font-family: "Lato", sans-serif;
+  width: 100vw;
+  height: 100vh;
+  line-height: 19px;
+}
+
+article,
+aside,
+figure,
+footer,
+header,
+hgroup,
+section {
+  display: block;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  vertical-align: baseline;
+}
+
+input {
+  padding: 1em;
+  border: 2px solid $graymediumlight;
+  flex: 40%;
+  font-size: 14px;
+  border-radius: 8px;
+  width: 100%;
+}
+
+span {
+  font-style: inherit;
+  font-weight: inherit;
+}
+
+button {
+  background-color: $black;
+  color: $white;
+  padding: 1em;
+  border: 0px;
+  border-radius: 8px;
+  font-size: $medium;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+a {
+  cursor: pointer;
+
+  &:hover {
+    transition: all 1s ease;
+  }
+}
+
+.content {
+  width: 100vw;
+  height: 100vh;
+  justify-content: space-between;
+}
+
+// -----------------------------------------------------------------------------
+// HELPERS
+// -----------------------------------------------------------------------------
+
+.clearfix::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2em;
+  padding-right: 2em;
+  width: 100%;
+}
+
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.remove-tablet {
+  @media (max-width: $widthTablet) {
+    display: none;
+  }
+}
+
+.remove-mobile {
+  @media (max-width: $widthMobile) {
+    display: none;
+  }
+}
+
+// -----------------------------------------------------------------------------
+// TYPOGRAPHY
+// -----------------------------------------------------------------------------
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.6em;
+}
+
+h3 {
+  font-size: 1.4em;
+}
+
+h4 {
+  font-size: 1.2em;
+}
+
+h5 {
+  font-size: 0.8em;
+}
+
+h6 {
+  font-size: 0.7em;
+}
+
+a {
+  color: $black;
+  text-decoration: none;
+  transition: 0.5s;
+
+  &:hover {
+    color: $blue;
+  }
+}

@@ -1,0 +1,32 @@
+// -----------------------------------------------------------------------------
+// MOBILE MENU STYLES
+// -----------------------------------------------------------------------------
+
+.mobile-menu-wrapper {
+  background-color: $white;
+  width: 80vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  position: fixed;
+  transition: transform 0.3s cubic-bezier(0, 0.52, 0, 1);
+  overflow: scroll;
+  z-index: 1000;
+
+  ul.mobile-menu {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 6em 2em 3em 2em;
+    margin: 0;
+
+    li {
+      padding: 0 0 1.4em;
+      font-size: 1.6em;
+
+      &:last-child {
+        padding: 0;
+      }
+    }
+  }
+}
