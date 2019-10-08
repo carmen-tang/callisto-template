@@ -3,10 +3,11 @@
 // -----------------------------------------------------------------------------
 
 #header {
-  font-family: "Montserrat", sans-serif;
   font-weight: bold;
   font-size: 14px;
   padding: 1em 0;
+  position: absolute;
+  right: 0;
 
   nav {
     display: flex;
@@ -17,7 +18,8 @@
       padding: 0 1em;
       display: flex;
       align-items: center;
-      font-size: 16px;
+      font-size: 14px;
+      color: $white;
 
       @media (max-width: 768px) {
         display: none;
@@ -35,7 +37,7 @@
     .mobile-menu {
       display: none;
       position: absolute;
-      left: 2em;
+      right: 2em;
       z-index: 1001;
 
       @media (max-width: 768px) {
@@ -46,7 +48,7 @@
         width: 50px;
         height: 4px;
         margin-bottom: 8px;
-        background-color: $blue;
+        background-color: $dustypeach;
         transition: all 600ms ease-in-out;
         border-radius: 1px;
 

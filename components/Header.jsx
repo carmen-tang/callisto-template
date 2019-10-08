@@ -3,8 +3,6 @@ import PropTypes from "prop-types";
 import Menu from "../components/Menu";
 import MobileMenu from "../components/MobileMenu";
 
-const chevron = require("../static/chevron-down-solid.svg");
-
 class Header extends Component {
   static propTypes = {};
 
@@ -43,7 +41,7 @@ class Header extends Component {
             Blog
           </a>
           <a className="menu-link" onClick={this.toggleMenu}>
-            Menu <img src={chevron} className="chevron" />
+            Menu
           </a>
 
           <div className="mobile-menu" onClick={this.toggleMobileMenu}>

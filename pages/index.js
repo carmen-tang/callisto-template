@@ -3,8 +3,8 @@ import '../scss/main.scss';
 
 import Head from 'next/head';
 import Header from '../components/Header';
-import HeaderSection from '../components/HeaderSection';
 import Hero from '../components/Hero';
+import Cards from '../components/Cards';
 import Footer from '../components/Footer';
 
 class Index extends Component {
@@ -21,6 +21,7 @@ class Index extends Component {
         </Head>
         <Header />
         <Hero />
+        <Cards />
         <Footer />
       </div>
     )

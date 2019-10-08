@@ -3,8 +3,7 @@ import PropTypes from "prop-types";
 
 const Menu = props => (
   <div>
-    <div className="overlay" />
-    <div className="mobile-menu-wrapper {visibility}">
+    <div className="mobile-menu-wrapper">
       <ul className="mobile-menu">
         <li>
           <a className="mobile-menu-link-dropdown" href="/">

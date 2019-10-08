@@ -1,0 +1,29 @@
+// -----------------------------------------------------------------------------
+// CARDS STYLES
+// -----------------------------------------------------------------------------
+
+.cards {
+	display: flex;
+	box-shadow: 0px -4px 10px 0px rgba(0,0,0,0.61);
+
+	.cards-row {
+		display: flex;
+		color: $white;
+		background-color: $black;
+		//background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(135,63,47,1) 35%, rgba(12,26,89,1) 83%);
+
+		.third {
+			width: 33%;
+			padding: 2em;
+		}
+
+		.two-thirds {
+			width: 66%;
+			padding: 2em;
+		}
+
+		button {
+			margin-top: 1em;
+		}
+	}
+}

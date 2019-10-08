@@ -9,7 +9,7 @@ class Hero extends Component {
   render() {
 
   	const styling = {
-  	  backgroundImage: "url('/static/hero.jpg')",
+  	  backgroundImage: "url('/static/mountains.jpg')",
   	  width:"100%",
   	  backgroundSize: "cover",
   	  backgroundRepeat: "no-repeat"
@@ -17,7 +17,8 @@ class Hero extends Component {
 
     return (
       <div id="hero" style={styling}>
-        test
+		<h1>Callisto</h1>
+		<p>A modern, responsive template built with React, Next.js, and SASS.</p>
       </div>
     )
   }
