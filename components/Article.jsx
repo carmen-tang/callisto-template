@@ -2,6 +2,12 @@ import React, { Component } from 'react';
 
 const surface = require("../static/surface.jpg");
 
+const articleBackground = {
+   backgroundImage: "url('/static/abstract-3.jpg')",
+   backgroundSize: "cover",
+   backgroundRepeat: "no-repeat"
+}
+
 class Article extends Component {
   constructor(props) {
     super(props)
@@ -10,7 +16,7 @@ class Article extends Component {
 
   render() {
     return (
-	    <div className="article">
+	    <div className="article" style={articleBackground}>
 			<p className="article-title">orbit and rotation</p>
 			<div className="next-article">
 				<div className="next-article-left">

@@ -4,7 +4,6 @@ const Footer = props => (
   <div id="footer">
     {/* logo */}
     <div className="logo-trademark">
-      <div className="logo">Logo here</div>
     </div>
     {/* social */}
     <div className="social footer-item">
@@ -17,7 +16,7 @@ const Footer = props => (
           <a href="">fb</a>
         </li>
         <li>
-          <a href="">aedin</a>
+          <a href="">linkedin</a>
         </li>
         <li>
           <a href="">instagram</a>

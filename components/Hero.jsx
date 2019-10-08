@@ -10,7 +10,7 @@ class Hero extends Component {
 
   	const styling = {
   	  backgroundImage: "url('/static/mountains.jpg')",
-  	  width:"100%",
+  	  width: "100%",
   	  backgroundSize: "cover",
   	  backgroundRepeat: "no-repeat"
   	}
