@@ -12,13 +12,14 @@ class Hero extends Component {
   	  backgroundImage: "url('/static/mountains.jpg')",
   	  width: "100%",
   	  backgroundSize: "cover",
-  	  backgroundRepeat: "no-repeat"
+  	  backgroundRepeat: "no-repeat",
+  	  backgroundPosition: "top center"
   	}
 
     return (
       <div id="hero" style={styling}>
 		<h1>Callisto</h1>
-		<p>A modern, responsive template built with React, Next.js, and SASS.</p>
+		<p>A modern, responsive starter template built with React, Next.js, and SASS.</p>
       </div>
     )
   }
