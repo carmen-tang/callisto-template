@@ -2,7 +2,7 @@
 // THEME STYLES
 // -----------------------------------------------------------------------------
 
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700|Lato:400,600,700");
+@import url("https://fonts.googleapis.com/css?family=Archivo|Spectral");
 
 // -----------------------------------------------------------------------------
 // VARIABLES
@@ -11,6 +11,7 @@
 // COLORS
 $black: #0e1111;
 $white: #ffffff;
+$dustypeach: #af7f6d;
 $purple: #a179fd;
 $blue: #2ac5e5;
 $yellow: #fdd53d;
@@ -21,11 +22,11 @@ $graymediumdark: #526269;
 $graydark: #828282;
 
 // FONT SIZE
-$smaller: 10px;
-$small: 12px;
-$medium: 14px;
-$medium-large: 17px;
-$large: 20px;
+$smaller: 9px;
+$small: 11px;
+$medium: 13px;
+$medium-large: 16px;
+$large: 18px;
 
 // RESPONSIVE SIZING
 $widthMobile: 400px;
@@ -62,7 +63,7 @@ html {
 body {
   color: $black;
   font-size: $medium;
-  font-family: "Lato", sans-serif;
+  font-family: "Archivo", sans-serif;
   width: 100vw;
   height: 100vh;
   line-height: 19px;
@@ -204,4 +205,135 @@ a {
   &:hover {
     color: $blue;
   }
+}
+
+// -----------------------------------------------------------------------------
+// MIXINS
+// -----------------------------------------------------------------------------
+
+@mixin transition($property: all, $duration: 0.45s, $ease: cubic-bezier(0.65,0,.076,1)) {
+	transition: $property $duration $ease;
+}
+
+// -----------------------------------------------------------------------------
+// BUTTONS
+// -----------------------------------------------------------------------------
+
+.ghost {
+	border: 1px solid $white;
+	padding: 1em;
+	text-transform: uppercase;
+	background-color: $black;
+	color: $white;
+	transition: ease 1s;
+
+	&:hover {
+		border: 1px solid $black;
+		background-color: $white;
+		color: $black;
+		transition: ease 1s;
+	}
+}
+
+.swipe {
+	position: relative;
+	display: block;
+	cursor: pointer;
+	outline: none;
+	border: 0;
+	vertical-align: middle;
+	text-decoration: none;
+	background: transparent;
+	padding: 0;
+	font-size: inherit;
+	font-family: inherit;
+	width: 12rem;
+	height: auto;
+	letter-spacing: 0.5px;
+
+	&.article-arrow {
+		width: 4em;
+
+		.circle {
+			background-color: transparent;
+					
+			.icon {
+				&.arrow {
+					width: 0;
+				}
+			}
+		}
+	}
+
+	.circle {
+		@include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+		position: relative;
+		margin: 0;
+		width: 3rem;
+		height: 3rem;
+		background: $white;
+		border-radius: 1.625rem;
+
+		.icon {
+			@include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			margin: auto;
+			background: $black;
+
+			&.arrow {
+				@include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+				left: 0.625rem;
+				width: 1.125rem;
+				height: 0.125rem;
+				background: none;
+
+				&::before {
+					position: absolute;
+					content: '';
+					top: -0.25rem;
+					right: 0.0625rem;
+					width: 0.625rem;
+					height: 0.625rem;
+					border-top: 0.125rem solid $black;
+					border-right: 0.125rem solid $black;
+					transform: rotate(45deg);
+				}
+			}
+		}
+	}
+
+	.button-text {
+		@include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		padding: 0.75rem 0;
+		margin: 0 0 0 1.85rem;
+		color: $white;
+		font-weight: 700;
+		line-height: 1.6;
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	&:hover {
+		.circle {
+			width: 100%;
+
+			.icon {
+				&.arrow {
+					background: $black;
+					transform: translate(1rem, 0);
+				}
+			}
+		}
+
+		.button-text {
+			color: $black;
+		}
+	}
 }
