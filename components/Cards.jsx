@@ -7,17 +7,11 @@ class Cards extends Component {
   }
 
   render() {
-
-  	const cardOne = {
-  	  //backgroundImage: "url('/static/jar.jpg')",
-  	  backgroundSize: "cover",
-  	  backgroundRepeat: "no-repeat"
-  	}
-
     return (
 	    <div className="cards">
 			<div className="cards-row">
-				<div className="third" style={cardOne}>
+				<div className="third">
+					<span className="serif">ad astra</span>
 					<p>Mars still remains the astrobiology community's number one choice for 'nearest rock with life,' but there are many researchers who argue that the moons of Jupiter are better bets. In particular, Europa, Ganymede, and Callisto are all thought to hide vast oceans of liquid water beneath their icy, outer skins.</p>
 					<button className="ghost">Onwards</button>
 				</div>

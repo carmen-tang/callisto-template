@@ -22,11 +22,11 @@ $graymediumdark: #526269;
 $graydark: #828282;
 
 // FONT SIZE
-$smaller: 10px;
-$small: 12px;
-$medium: 14px;
-$medium-large: 17px;
-$large: 20px;
+$smaller: 9px;
+$small: 11px;
+$medium: 13px;
+$medium-large: 16px;
+$large: 18px;
 
 // RESPONSIVE SIZING
 $widthMobile: 400px;
@@ -250,6 +250,18 @@ a {
 	width: 12rem;
 	height: auto;
 	letter-spacing: 0.5px;
+
+	&.article-arrow {
+		width: 4em;
+
+		.circle {
+			.icon {
+				&.arrow {
+					width: 0;
+				}
+			}
+		}
+	}
 
 	.circle {
 		@include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
